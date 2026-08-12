@@ -29,4 +29,3 @@ func body_entered_hurtbox(body: Node2D):
 ## A function called by the [b]animation_finished[/b] signal
 func animation_finished(anim_name: StringName):
 	pass
-

@@ -1,8 +1,6 @@
 @abstract extends "navigatable_entity.gd"
 ## Base abstract class for tying physics and state together for all combat entities
 
-## Name of the Kick Hitbox child object
-const KICK_AREA_NAME = "Kickbox"
 ## Name of the Bullet Detection Area child object
 const BDA_NAME = "BulletDetectionArea"
 ## Name of the Guard Area child object
