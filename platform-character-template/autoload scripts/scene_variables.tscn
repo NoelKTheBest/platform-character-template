@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://t46se4weowtd"]
+
+[ext_resource type="Script" uid="uid://1wswiubqajoq" path="res://autoload scripts/scene_variables.gd" id="1_d8j51"]
+
+[node name="SceneVariables" type="Node" unique_id=594785965]
+script = ExtResource("1_d8j51")
