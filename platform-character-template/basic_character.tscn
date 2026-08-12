@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://e8oofrptol4"]
+
+[ext_resource type="Texture2D" uid="uid://677h3d1u5f50" path="res://basic animations-Sheet.png" id="1_ad756"]
+[ext_resource type="AnimationLibrary" uid="uid://gyng4bmvnuud" path="res://Basic Animations.res" id="2_5osja"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aad6l"]
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_jgwp0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u4nj2"]
+radius = 24.166092
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yxwtl"]
+size = Vector2(12, 20)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1382596603 groups=["Enemy"]]
+collision_layer = 2
+collision_mask = 101
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1986151574]
+shape = SubResource("CapsuleShape2D_aad6l")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1122560741]
+texture = ExtResource("1_ad756")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=231324227]
+"libraries/Basic Animations" = ExtResource("2_5osja")
+
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=1190181753]
+active = false
+tree_root = SubResource("AnimationNodeStateMachine_jgwp0")
+advance_expression_base_node = NodePath("..")
+anim_player = NodePath("../AnimationPlayer")
+
+[node name="PlayerAttackArea" type="Area2D" parent="." unique_id=1584809900]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerAttackArea" unique_id=773872756]
+shape = SubResource("CircleShape2D_u4nj2")
+debug_color = Color(0.7, 0, 0, 0.21960784)
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=1231952929]
+collision_layer = 0
+collision_mask = 24880
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=317376491]
+shape = SubResource("RectangleShape2D_yxwtl")
+debug_color = Color(0, 0.7, 0.175, 0.41960785)
