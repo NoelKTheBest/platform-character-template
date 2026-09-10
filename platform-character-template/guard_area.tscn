@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dipxiwgexp3dp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a58qr"]
+radius = 152.0
+
+[node name="GuardArea" type="Area2D"]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_a58qr")
+debug_color = Color(0.66871744, 0.50791585, 0.1373716, 0.41960785)

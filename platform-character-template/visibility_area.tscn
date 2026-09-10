@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dmfi2vbui0obv"]
+
+[node name="VisibilityArea" type="Area2D"]
+collision_layer = 0
+monitorable = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, -11)
+polygon = PackedVector2Array(8, 3, 205, -95, 205, 19, 8, 19)
